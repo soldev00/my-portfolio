@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/web-icon.jpeg" />
+  </head>
+  <body class="dark">
+    <!-- Header/Navigation Bar -->
+    <header class="header">
+      <!-- Logo/Site Title -->
+      <div class="logo-container">
+        <span class="logo">&lt;SolDev/&gt;</span>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="nav-links">
+        <a href="#home-section" class="nav-link">Home</a>
+        <a href="#about-section" class="nav-link">About</a>
+        <a href="#projects-section" class="nav-link">Projects</a>
+        <a href="#skills-section" class="nav-link">Skills</a>
+        <a href="#contact-section" class="nav-link">Contact</a>
+        <!-- GitHub Icon (Inline SVG) -->
+        <!-- <a
+          href="https://github.com/soldev00"
+          target="_blank"
+          aria-label="GitHub Profile"
+        >
+          <svg
+            class="github-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12 0C5.372 0 0 5.372 0 12c0 5.303 3.438 9.799 8.205 11.385.6.11.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.043-1.61-4.043-1.61-.546-1.387-1.333-1.758-1.333-1.758-1.09-.745.08-.73.08-.73 1.205.085 1.838 1.238 1.838 1.238 1.07 1.833 2.808 1.304 3.49.997.108-.775.418-1.304.762-1.605-2.665-.3-5.464-1.332-5.464-5.93 0-1.31.465-2.382 1.235-3.22-.12-.3-.535-1.52.117-3.176 0 0 1-.32 3.3.123 1.05-.29 2.16-.435 3.26-.44 1.1.005 2.21.15 3.26.44 2.3-0.443 3.3-0.123 3.3-0.123.65 1.656.23 2.876.12 3.176.77.838 1.235 1.91 1.235 3.22 0 4.61-2.8 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.89-.015 3.28 0 .318.21.69.825.575C20.565 21.795 24 17.3 24 12c0-6.628-5.372-12-12-12z"
+              fill="currentColor"
+            />
+          </svg>
+        </a> -->
+      </nav>
+
+      <!-- Mobile Menu Button (Hamburger Icon - Inline SVG) -->
+      <button
+        id="mobileMenuButton"
+        class="mobile-menu-button"
+        aria-label="Open mobile menu"
+      >
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M4 6H20M4 12H20M4 18H20"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu hidden">
+      <a href="#home-section" class="nav-link">Home</a>
+      <a href="#about-section" class="nav-link">About</a>
+      <a href="#projects-section" class="nav-link">Projects</a>
+      <a href="#skills-section" class="nav-link">Skills</a>
+      <a href="#contact-section" class="nav-link">Contact</a>
+      <a href="https://github.com/yourusername" target="_blank">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style="
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 0.5rem;
+          "
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12 0C5.372 0 0 5.372 0 12c0 5.303 3.438 9.799 8.205 11.385.6.11.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.043-1.61-4.043-1.61-.546-1.387-1.333-1.758-1.333-1.758-1.09-.745.08-.73.08-.73 1.205.085 1.838 1.238 1.838 1.238 1.07 1.833 2.808 1.304 3.49.997.108-.775.418-1.304.762-1.605-2.665-.3-5.464-1.332-5.464-5.93 0-1.31.465-2.382 1.235-3.22-.12-.3-.535-1.52.117-3.176 0 0 1-.32 3.3.123 1.05-.29 2.16-.435 3.26-.44 1.1.005 2.21.15 3.26.44 2.3-0.443 3.3-0.123 3.3-0.123.65 1.656.23 2.876.12 3.176.77.838 1.235 1.91 1.235 3.22 0 4.61-2.8 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.89-.015 3.28 0 .318.21.69.825.575C20.565 21.795 24 17.3 24 12c0-6.628-5.372-12-12-12z"
+            fill="currentColor"
+          />
+        </svg>
+        GitHub
+      </a>
+    </div>
+
+    <!-- Main Content Area - Contains all page sections -->
+    <main>
+      <!-- Home Section -->
+      <section id="home-section" class="page-section">
+        <div class="home-content">
+          <!-- Text Content -->
+          <div class="text-content">
+            <p>Hi, I'm Amobi Chimeremumma</p>
+            <h2 id="animated-text" class="typing-cursor"></h2>
+          </div>
+
+          <!-- Profile Picture/Avatar -->
+          <div class="avatar-container">
+            <img
+              src="img/logo.jpeg"
+              alt="Profile Avatar"
+              class="avatar"
+              onerror="this.onerror=null;this.src='https://placehold.co/150x150/222/FFF?text=Error';"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about-section" class="page-section">
+        <div class="about-content">
+          <h2>About Me</h2>
+          <p>
+            I am a passionate web developer with a keen interest in creating
+            engaging and user-friendly digital experiences. My journey in
+            programming started with a curiosity for how websites work behind
+            those those screen's, and it quickly grew into a love for building
+            and designing. I enjoy solving complex problems and continuously
+            learning new technologies.
+          </p>
+          <p>
+            When I'm not coding, you can find me exploring new places,
+            whathching movies playing games, or spending time with my friends
+            and family.
+          </p>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects-section" class="page-section">
+        <div class="projects-content">
+          <h2>My Projects</h2>
+          <div class="project-grid">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+              <img src="img/project-1.png" alt="Eat Healthy Food Web" />
+              <h3>Project Alpha</h3>
+              <p>
+                A web application for food. It helps users to find healthy food
+                and eat Healthy.
+              </p>
+              <a href="https://github.com/soldev00/omnifood"
+                >View Project
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="
+                    width: 16px;
+                    height: 16px;
+                    vertical-align: middle;
+                    margin-left: 0.25rem;
+                  "
+                >
+                  <path
+                    d="M10 6V8H14V6H10ZM10 16V18H14V16H10ZM6 10V14H8V10H6ZM16 10V14H18V10H16ZM4 4H20V20H4V4ZM2 2V22H22V2H2Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+            </div>
+            <!-- Project Card 2 -->
+            <div class="project-card">
+              <img src="img/project-2.png" alt="A Budget App" />
+              <h3>Budget-ti</h3>
+              <p>A budget app, It checks your expenses and helps you to save</p>
+              <a href="https://github.com/soldev00/budge-ti"
+                >View Project
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="
+                    width: 16px;
+                    height: 16px;
+                    vertical-align: middle;
+                    margin-left: 0.25rem;
+                  "
+                >
+                  <path
+                    d="M10 6V8H14V6H10ZM10 16V18H14V16H10ZM6 10V14H8V10H6ZM16 10V14H18V10H16ZM4 4H20V20H4V4ZM2 2V22H22V2H2Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+            </div>
+            <!-- Project Card 3 -->
+            <div class="project-card">
+              <img src="img/project-3.png" alt="Dice Game" />
+              <h3>Game Prototype</h3>
+              <p>A small browser-based game developed using JavaScript.</p>
+              <a href="https://github.com/soldev00/roll-dice-game"
+                >View Project
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="
+                    width: 16px;
+                    height: 16px;
+                    vertical-align: middle;
+                    margin-left: 0.25rem;
+                  "
+                >
+                  <path
+                    d="M10 6V8H14V6H10ZM10 16V18H14V16H10ZM6 10V14H8V10H6ZM16 10V14H18V10H16ZM4 4H20V20H4V4ZM2 2V22H22V2H2Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills-section" class="page-section">
+        <div class="skills-content">
+          <h2>My Skills</h2>
+          <div class="skill-item">
+            <div class="skill-label">HTML</div>
+            <div class="skill-bar-container">
+              <div class="skill-bar" data-percentage="90"></div>
+              <span class="skill-percentage">90%</span>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">CSS</div>
+            <div class="skill-bar-container">
+              <div class="skill-bar" data-percentage="85"></div>
+              <span class="skill-percentage">85%</span>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">JavaScript</div>
+            <div class="skill-bar-container">
+              <div class="skill-bar" data-percentage="80"></div>
+              <span class="skill-percentage">80%</span>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">React</div>
+            <div class="skill-bar-container">
+              <div class="skill-bar" data-percentage="75"></div>
+              <span class="skill-percentage">75%</span>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">Node.js</div>
+            <div class="skill-bar-container">
+              <div class="skill-bar" data-percentage="70"></div>
+              <span class="skill-percentage">70%</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact-section" class="page-section">
+        <div class="contact-content">
+          <h2>Get In Touch</h2>
+          <p>
+            Feel free to reach out to me for collaborations, questions, or just
+            to say hello!
+          </p>
+          <form id="contactForm" class="contact-form">
+            <div>
+              <input
+                type="text"
+                id="contactName"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div>
+              <input
+                type="email"
+                id="contactEmail"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div>
+              <textarea
+                id="contactMessage"
+                placeholder="Your Message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+          </form>
+          <div id="formMessage" class="message-box"></div>
+          <!-- Message box for feedback -->
+          <div class="social-icons">
+            <a href="mailto:soldevacs@gmail.com" aria-label="Email Me">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V6C22 4.89543 21.1046 4 20 4ZM20 6L12 11L4 6H20ZM4 18V7L12 12L20 7V18H4Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://linkedin.com/in/soluchi-amobi-41192a275/"
+              target="_blank"
+              aria-label="LinkedIn Profile"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 0H5C2.239 0 0 2.239 0 5V19C0 21.761 2.239 24 5 24H19C21.761 24 24 21.761 24 19V5C24 2.239 21.761 0 19 0ZM8 19H5V8H8V19ZM6.5 6.732C5.506 6.732 4.706 5.922 4.706 4.93C4.706 3.938 5.506 3.128 6.5 3.128C7.494 3.128 8.294 3.938 8.294 4.93C8.294 5.922 7.494 6.732 6.5 6.732ZM20 19H17V13.396C17 12.006 16.006 11 14.615 11C13.224 11 12.232 12.006 12.232 13.396V19H9.232V8H12.232V9.28C12.723 8.355 13.791 7.732 14.996 7.732C17.765 7.732 20 9.967 20 12.732V19Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://wa.me/07018835051"
+              target="_blank"
+              aria-label="WhatsApp Profile"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="100"
+                height="100"
+                viewBox="0 0 32 32"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M 24.503906 7.503906 C 22.246094 5.246094 19.246094 4 16.050781 4 C 9.464844 4 4.101563 9.359375 4.101563 15.945313 C 4.097656 18.050781 4.648438 20.105469 5.695313 21.917969 L 4 28.109375 L 10.335938 26.445313 C 12.078125 27.398438 14.046875 27.898438 16.046875 27.902344 L 16.050781 27.902344 C 22.636719 27.902344 27.996094 22.542969 28 15.953125 C 28 12.761719 26.757813 9.761719 24.503906 7.503906 Z M 16.050781 25.882813 L 16.046875 25.882813 C 14.265625 25.882813 12.515625 25.402344 10.992188 24.5 L 10.628906 24.285156 L 6.867188 25.269531 L 7.871094 21.605469 L 7.636719 21.230469 C 6.640625 19.648438 6.117188 17.820313 6.117188 15.945313 C 6.117188 10.472656 10.574219 6.019531 16.054688 6.019531 C 18.707031 6.019531 21.199219 7.054688 23.074219 8.929688 C 24.949219 10.808594 25.980469 13.300781 25.980469 15.953125 C 25.980469 21.429688 21.523438 25.882813 16.050781 25.882813 Z M 21.496094 18.445313 C 21.199219 18.296875 19.730469 17.574219 19.457031 17.476563 C 19.183594 17.375 18.984375 17.328125 18.785156 17.625 C 18.585938 17.925781 18.015625 18.597656 17.839844 18.796875 C 17.667969 18.992188 17.492188 19.019531 17.195313 18.871094 C 16.894531 18.722656 15.933594 18.40625 14.792969 17.386719 C 13.90625 16.597656 13.304688 15.617188 13.132813 15.320313 C 12.957031 15.019531 13.113281 14.859375 13.261719 14.710938 C 13.398438 14.578125 13.5625 14.363281 13.710938 14.1875 C 13.859375 14.015625 13.910156 13.890625 14.011719 13.691406 C 14.109375 13.492188 14.058594 13.316406 13.984375 13.167969 C 13.910156 13.019531 13.3125 11.546875 13.0625 10.949219 C 12.820313 10.367188 12.574219 10.449219 12.390625 10.4375 C 12.21875 10.429688 12.019531 10.429688 11.820313 10.429688 C 11.621094 10.429688 11.296875 10.503906 11.023438 10.804688 C 10.75 11.101563 9.980469 11.824219 9.980469 13.292969 C 9.980469 14.761719 11.050781 16.183594 11.199219 16.382813 C 11.347656 16.578125 13.304688 19.59375 16.300781 20.886719 C 17.011719 21.195313 17.566406 21.378906 18 21.515625 C 18.714844 21.742188 19.367188 21.710938 19.882813 21.636719 C 20.457031 21.550781 21.648438 20.914063 21.898438 20.214844 C 22.144531 19.519531 22.144531 18.921875 22.070313 18.796875 C 21.996094 18.671875 21.796875 18.597656 21.496094 18.445313 Z"
+                ></path>
+              </svg>
+            </a>
+
+            <a
+              href="https://github.com/soldev00"
+              target="_blank"
+              aria-label="GitHub Profile"
+            >
+              <svg
+                class="github-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 0C5.372 0 0 5.372 0 12c0 5.303 3.438 9.799 8.205 11.385.6.11.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.043-1.61-4.043-1.61-.546-1.387-1.333-1.758-1.333-1.758-1.09-.745.08-.73.08-.73 1.205.085 1.838 1.238 1.838 1.238 1.07 1.833 2.808 1.304 3.49.997.108-.775.418-1.304.762-1.605-2.665-.3-5.464-1.332-5.464-5.93 0-1.31.465-2.382 1.235-3.22-.12-.3-.535-1.52.117-3.176 0 0 1-.32 3.3.123 1.05-.29 2.16-.435 3.26-.44 1.1.005 2.21.15 3.26.44 2.3-0.443 3.3-0.123 3.3-0.123.65 1.656.23 2.876.12 3.176.77.838 1.235 1.91 1.235 3.22 0 4.61-2.8 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.89-.015 3.28 0 .318.21.69.825.575C20.565 21.795 24 17.3 24 12c0-6.628-5.372-12-12-12z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </body>
+</html>
