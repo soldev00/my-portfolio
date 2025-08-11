@@ -33,7 +33,7 @@ const animatedTextElement = document.getElementById("animated-text");
 
 const phrasesToAnimate = [
   "Web Developer",
-  "Backend Developer",
+  "Backend Dev",
   "Full Stack Dev",
   "Gamer",
 ];
