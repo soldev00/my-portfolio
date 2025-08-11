@@ -36,7 +36,8 @@ const phrasesToAnimate = [
   "Backend Dev",
   "Full Stack Dev",
   "Gamer",
-];
+].map(phrase => phrase.replace(/\s/g, '\u00A0'))
+
 const typingSpeed = 100; // milliseconds per character
 const pauseAfterTyping = 1000; // milliseconds to pause after typing a phrase
 const deleteSpeed = 50; // milliseconds per character for deleting

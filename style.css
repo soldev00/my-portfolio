@@ -145,6 +145,8 @@ body.dark {
 /* No .hidden class for page-section anymore, all are displayed */
 
 /* Home Section Specific */
+
+
 .home-content {
   display: flex;
   flex-direction: column;
@@ -462,6 +464,12 @@ body.dark {
     font-size: 3.75rem; /* md:text-6xl */
   }
 
+  #animated-text {
+   white-space: pre-wrap;
+   word-break: break-word;
+   display: inline-block;
+   width: 100%;
+}
   .project-grid {
     grid-template-columns: repeat(2, 1fr); /* md:grid-cols-2 */
   }
