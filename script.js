@@ -1,3 +1,72 @@
+// --- Project Data ---
+
+const projectsData = {
+  'omnifood': {
+    title: 'Omnifood webapp',
+    description: 'A web app that helps users discover and eat healthy food.',
+    features: ['Browse a catalog of healthy meals', 'Personalized meal recommendations', 'Responsive design'],
+    technologies: 'HTML, CSS, JavaScript',
+    githubLink: 'https://github.com/your-username/omnifood',
+    demoLink: 'https://omi-food.netlify.app/',
+    screenshot: 'images/project-1.png'
+  },
+  'budget-ti': {
+    title: 'Budget-ti',
+    description: 'A budgeting app that helps track expenses and savings.',
+    features: ['Track income and expenses', 'Set saving goals', 'Generate reports'],
+    technologies: 'HTNL, CSS, Node.js, MongoDB',
+    githubLink: 'https://github.com/your-username/budget-ti',
+    demoLink: 'https://budget-ti.netlify.app/',
+    screenshot: 'images/project-2.png'
+  },
+  'dice-game': {
+    title: 'Dice Game',
+    description: 'A browser-based two-player dice rolling game.',
+    features: ['Two-player mode', 'Automatic scoring', 'First to 100 wins'],
+    technologies: 'HTML, CSS, JavaScript',
+    githubLink: 'https://github.com/your-username/dice-game',
+    demoLink: '#',
+    screenshot: 'images/project-3.png'
+  },
+  'exclusive': {
+    title: 'Exclusive',
+    description: 'An e-commerce website with modern design and functionality.',
+    features: ['User accounts and authentication', 'Shopping cart', 'Checkout with payment'],
+    technologies: 'React, Node.js, MongoDB, Typescript,',
+    githubLink: 'https://github.com/your-username/exclusive',
+    demoLink: 'https://exclusiveng.netlify.app/',
+    screenshot: 'images/excluzive.ng.png'
+  }
+};
+
+// --- Load Project Details ---
+document.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const projectId = urlParams.get('id');
+  const project = projectsData[projectId];
+
+  if (project) {
+    document.getElementById('project-title-tag').textContent = `${project.title} - Project Details`;
+    document.getElementById('project-title').textContent = project.title;
+    document.getElementById('project-description').textContent = project.description;
+    document.getElementById('technologies-used').textContent = project.technologies;
+    document.getElementById('live-demo-link').href = project.demoLink;
+    document.getElementById('github-link').href = project.githubLink;
+    document.getElementById('project-screenshot').src = project.screenshot;
+
+    const featuresList = document.getElementById('key-features-list');
+    featuresList.innerHTML = '';
+    project.features.forEach(f => {
+      const li = document.createElement('li');
+      li.textContent = f;
+      featuresList.appendChild(li);
+    });
+  } else {
+    document.getElementById('project-title').textContent = 'Project Not Found';
+    document.getElementById('project-description').textContent = 'The requested project could not be found.';
+  }
+});
+
 // JavaScript for mobile menu toggle
 const mobileMenuButton = document.getElementById("mobileMenuButton");
 const mobileMenu = document.getElementById("mobileMenu");
@@ -35,7 +104,7 @@ const phrasesToAnimate = [
   "Web Developer",
   "Backend Dev",
   "Full Stack Dev",
-  "Gamer",
+  "Gamer",  
 ].map(phrase => phrase.replace(/\s/g, '\u00A0'))
 
 const typingSpeed = 100; // milliseconds per character
@@ -248,3 +317,9 @@ window.onload = () => {
 //     );
 //   }
 // });
+
+
+  // This is your complete script.js file.
+// It contains both the data and the logic.
+
+

@@ -145,8 +145,6 @@ body.dark {
 /* No .hidden class for page-section anymore, all are displayed */
 
 /* Home Section Specific */
-
-
 .home-content {
   display: flex;
   flex-direction: column;
@@ -160,13 +158,15 @@ body.dark {
 }
 
 .home-content .text-content h2 {
-  font-size: 3rem; /* text-5xl */
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  /* font-size: 3rem; text-5xl */
   font-weight: 700; /* font-bold */
   color: #facc15; /* text-yellow-400 */
   margin-bottom: 1rem; /* mb-4 */
   min-height: 1.2em; /* Ensure enough height for text to appear */
-  white-space: nowrap; /* Keep text on one line */
+  white-space: normal; /* Keep text on one line was nowrap */
   overflow: hidden; /* Hide overflow before animation */
+  text-align: center;
 }
 
 .home-content .text-content .welcome-text {
@@ -199,6 +199,27 @@ body.dark {
   border: 3px solid #facc15;
   flex-shrink: 0;
 }
+
+
+/* CV Download Button */
+.button-cv {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 12px 24px;
+  background-color: #facc15; /* yellow */
+  color: #1a1a1a; /* dark text */
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-cv:hover {
+  background-color: #eab308; /* darker yellow */
+  transform: scale(1.05);
+}
+
+
 
 /* About Section Specific */
 .about-content {
@@ -278,12 +299,271 @@ body.dark {
   color: #93c5fd; /* hover:text-blue-300 */
 }
 
-.project-card a svg {
+/* .project-card a svg {
   width: 16px;
   height: 16px;
-  fill: currentColor; /* Inherit color from parent */
+  fill: currentColor; /* Inherit color from parent 
   vertical-align: middle;
   margin-left: 0.25rem;
+}
+ */
+
+
+
+.Details-button,
+.golive-button {
+  text-align: center;
+  background-color: #c29c04;
+  color: white;              
+  margin: 20px;
+  border-radius: 0.3rem;
+  padding: 5px 10px;
+  text-decoration: none;     
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.Details-button:hover,
+.golive-button:hover {
+  background-color: #eab308; 
+  color: #000;               
+}
+
+
+
+/* Project Details Page */
+body {
+    font-family: 'Poppins', sans-serif; /* A clean, modern font */
+    background-color: #2a2a2a; /* Very dark gray for the background */
+    color: #E0E0E0; /* Light gray for general text */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+/* Optional: Import Poppins font from Google Fonts if not already done */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Main Container for Project Cards */
+.projects-container {
+    display: grid; /* Use CSS Grid for a responsive layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 30px; /* Space between project cards */
+    padding: 50px;
+    max-width: 1200px;
+    margin: 50px auto; /* Center the container */
+    background-color: #1A1A1A; /* Slightly lighter dark for the section background */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Individual Project Card Styling */
+.project-card {
+    background-color: #2a2a2a; /* Darker gray for card background */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+.project-card h2 {
+    color: #FFF; /* White for project titles */
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    font-size: 0.95em;
+    color: #B0B0B0; /* Lighter gray for descriptions */
+    flex-grow: 1; /* Allows description to take up available space */
+    margin-bottom: 25px;
+}
+
+/* Button Styling (Yellow for main buttons) */
+.button-details,
+.button-live,
+.button-github {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Primary Yellow Button */
+.button-details,
+.button-live {
+    background-color: #FFD700; /* Gold/Yellow */
+    color: #121212; /* Dark text for contrast */
+    border: 2px solid #FFD700;
+}
+
+.button-details:hover,
+.button-live:hover {
+    background-color: #FFC107; /* Slightly darker yellow on hover */
+    border-color: #FFC107;
+    color: #000;
+}
+
+/* GitHub Button (Subtle Darker Tone) */
+.button-github {
+    background-color: #333; /* Dark gray for GitHub */
+    color: #FFF;
+    border: 2px solid #333;
+}
+
+.button-github:hover {
+    background-color: #444; /* Slightly lighter gray on hover */
+    border-color: #444;
+    color: #FFF;
+}
+
+
+/* Project Details Page Specific Styles */
+.project-details-page {
+    background-color: #1a1a1a; /* Dark blue-gray from the image base */
+    min-height: 100vh; /* Ensure it takes full viewport height */
+    padding: 60px; /* More padding for a spacious look */
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    background-color: #2a2a2a; /* Darker blue-gray for header */
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.back-button {
+    color: #FFD700; /* Yellow for back button */
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-right: 30px;
+    transition: color 0.3s ease;
+}
+
+.back-button:hover {
+    color: #FFC107; /* Darker yellow on hover */
+}
+
+.project-header h1 {
+    color: #FFF;
+    font-size: 2.5em;
+    margin: 0;
+    flex-grow: 1; /* Allows title to take remaining space */
+}
+
+.project-main-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-description-section {
+    flex: 2; /* Takes more space */
+    min-width: 300px; /* Minimum width before wrapping */
+}
+
+.project-description-section p {
+    font-size: 1.1em;
+    color: #B0B0B0;
+    margin-bottom: 30px;
+}
+
+/* Project Actions (Live Demo, Github) within details page */
+.project-actions {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.project-actions .button-live,
+.project-actions .button-github {
+    margin-right: 15px; /* Space between buttons */
+}
+
+
+.project-media-section {
+    flex: 1; /* Takes less space */
+    min-width: 250px; /* Minimum width before wrapping */
+}
+
+.project-screenshot {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Key Features Box */
+.key-features-box {
+    background-color: #2a2a2a; /* Darker blue-gray, same as header */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.key-features-box h2 {
+    color: #FFF;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #facc15; /* A subtle purple line */
+    padding-bottom: 10px;
+}
+
+.key-features-box ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+}
+
+.key-features-box li {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><circle cx="5" cy="5" r="5" fill="%23FFD700"/></svg>'); /* Yellow circle for bullet points */
+    background-repeat: no-repeat;
+    background-position: 0 8px; /* Adjust position of the custom bullet */
+    padding-left: 25px; /* Space for the custom bullet */
+    margin-bottom: 15px;
+    font-size: 1em;
+    color: #E0E0E0;
+}
+
+/* Technologies Used Section */
+.technologies h3 {
+    color: #FFF;
+    font-size: 1.5em;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+
+.technologies p {
+    background-color: #3A3A3A; /* Darker background for technology tags */
+    color: #FFD700; /* Yellow text for technologies */
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 /* Skills Section Specific */
@@ -464,12 +744,6 @@ body.dark {
     font-size: 3.75rem; /* md:text-6xl */
   }
 
-  #animated-text {
-   white-space: pre-wrap;
-   word-break: break-word;
-   display: inline-block;
-   width: 100%;
-}
   .project-grid {
     grid-template-columns: repeat(2, 1fr); /* md:grid-cols-2 */
   }
@@ -480,4 +754,35 @@ body.dark {
   .project-grid {
     grid-template-columns: repeat(3, 1fr); /* lg:grid-cols-3 */
   }
+}
+
+
+/* Responsivness for details page */
+@media (max-width: 768px) {
+    .projects-container {
+        padding: 30px;
+    }
+    .project-details-page {
+        padding: 30px;
+    }
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+    .back-button {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+    .project-header h1 {
+        font-size: 2em;
+    }
+    .project-main-content {
+        flex-direction: column;
+    }
+    .project-description-section,
+    .project-media-section {
+        min-width: unset; /* Remove min-width for full flexibility */
+        width: 100%;
+    }
 }
