@@ -6,7 +6,7 @@ const projectsData = {
     description: 'A web app that helps users discover and eat healthy food.',
     features: ['Browse a catalog of healthy meals', 'Personalized meal recommendations', 'Responsive design'],
     technologies: 'HTML, CSS, JavaScript',
-    githubLink: 'https://github.com/your-username/omnifood',
+    githubLink: 'https://github.com/soldev00/omnifood',
     demoLink: 'https://omi-food.netlify.app/',
     screenshot: 'images/project-1.png'
   },
@@ -15,7 +15,7 @@ const projectsData = {
     description: 'A budgeting app that helps track expenses and savings.',
     features: ['Track income and expenses', 'Set saving goals', 'Generate reports'],
     technologies: 'HTNL, CSS, Node.js, MongoDB',
-    githubLink: 'https://github.com/your-username/budget-ti',
+    githubLink: 'https://github.com/soldev00/budge-ti',
     demoLink: 'https://budget-ti.netlify.app/',
     screenshot: 'images/project-2.png'
   },
@@ -24,8 +24,8 @@ const projectsData = {
     description: 'A browser-based two-player dice rolling game.',
     features: ['Two-player mode', 'Automatic scoring', 'First to 100 wins'],
     technologies: 'HTML, CSS, JavaScript',
-    githubLink: 'https://github.com/your-username/dice-game',
-    demoLink: '#',
+    githubLink: 'https://github.com/soldev00/roll-dice-game',
+    demoLink: 'https://rolldice-sol.netlify.app/',
     screenshot: 'images/project-3.png'
   },
   'exclusive': {
@@ -33,7 +33,7 @@ const projectsData = {
     description: 'An e-commerce website with modern design and functionality.',
     features: ['User accounts and authentication', 'Shopping cart', 'Checkout with payment'],
     technologies: 'React, Node.js, MongoDB, Typescript,',
-    githubLink: 'https://github.com/your-username/exclusive',
+    githubLink: 'https://github.com/chesterOps/ecommerce-backend',
     demoLink: 'https://exclusiveng.netlify.app/',
     screenshot: 'images/excluzive.ng.png'
   }
